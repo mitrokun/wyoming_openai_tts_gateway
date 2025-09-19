@@ -1,4 +1,4 @@
-# wyoming_openai_tts_gateway
+# wyoming -> openai compatible
 ```
 # Deal with dependency installation
 # Edit the Wyoming server host and port in code, then start the server.
