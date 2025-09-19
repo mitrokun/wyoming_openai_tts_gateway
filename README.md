@@ -1,3 +1,4 @@
+If you use Home Assistant and already have a speech generation server, you can use this adapter to use it for third-party clients working through the OAI API.
 # wyoming -> openai compatible
 ```
 # Deal with dependency installation
