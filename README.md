@@ -1,7 +1,7 @@
 If you use Home Assistant and already have a speech generation server, you can use this adapter to use it for third-party clients working through the OAI API.
 # wyoming -> openai compatible
 ```
-# Deal with dependency installation
+# Deal with dependency (wyoming, fastapi... ) installation
 # Edit the Wyoming server host and port in code, then start the server.
 uvicorn main:app --host 0.0.0.0 --port 8555
 ```
