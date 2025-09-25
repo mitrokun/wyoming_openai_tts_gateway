@@ -32,12 +32,11 @@ WYOMING_HOST = os.getenv("WYOMING_HOST", "127.0.0.1")
 WYOMING_PORT = int(os.getenv("WYOMING_PORT", "10205"))
 
 app = FastAPI(
-    title="wyoming-openai-tts-gateway", # <-- Даем проекту имя
+    title="wyoming-openai-tts-gateway",
     description="A gateway that exposes local Wyoming TTS services via an OpenAI-compatible API.",
     version="2.2.0 (production)",
 )
 
-# --- Функция для создания WAV-заголовка ---
 def create_wav_header(sample_rate: int, bits_per_sample: int, channels: int) -> bytes:
     chunk_size = 0xFFFFFFFF
     final_data_size = 0xFFFFFFFF
@@ -152,4 +151,5 @@ async def generate_streaming_audio(request: OpenAISpeechRequest) -> AsyncGenerat
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8555, log_config=None)
